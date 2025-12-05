@@ -1,6 +1,5 @@
 import sys  # для подключения собственного обработчика исключений
 import os # для работы с файлами и папками
-import json 
 import traceback # для получения стека вызовов
 from datetime import datetime # для фиксации времени ошибки
 
@@ -172,7 +171,7 @@ def exception_handler(exc_type, exc_value, exc_traceback):
 
     print()
     print(f"{GREEN}{BOLD}Во время выполнения программы произошла ошибка.{RESET}")
-    print(f"Отчет сохранён в файле: {GREEN}{report_path}{RESET}")
+    print(f"Отчет сохранен в файле: {GREEN}{report_path}{RESET}")
     print()
 
     print_report_to_terminal(error_data)
