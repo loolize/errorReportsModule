@@ -1,9 +1,8 @@
 import error_module
 
 
-def divide_demo():
-    print("\n    Демонстрация: деление")
-    a_str = input("Введите делимое (целое число): ")
+def divide():
+    a_str = input("Введите делимое: ")
     b_str = input("Введите делитель (0 для ошибки): ")
 
     a = int(a_str)
@@ -13,8 +12,7 @@ def divide_demo():
     print(f"Результат деления: {result}")
 
 
-def list_index_demo():
-    print("\n   Демонстрация: доступ к элементу списка")
+def list_index():
     items = ["первый", "второй", "третий"]
 
     print("Содержимое списка:", items)
@@ -26,14 +24,13 @@ def list_index_demo():
     print(f"Выбранный элемент: {value}")
 
 
-def file_read_demo():
-    print("\n   Демонстрация: чтение файла")
-    filename = input("Введите имя файла (введите несуществующее имя для ошибки): ")
+def file_read():
+    filename = input("Введите имя файла (несуществующее имя для ошибки): ")
 
     with open(filename, "r", encoding="utf-8") as f:
         content = f.read()
 
-    print("\nФайл успешно прочитан. Содержимое:")
+    print("\nСодержимое:")
     print()
     print(content)
     print()
@@ -41,7 +38,7 @@ def file_read_demo():
 
 def show_menu():
     print()
-    print(" ОТЧЕТЫ ОБ ОШИБКАХ")
+    print(" ОТЧЕТЫ ОБ ОШИБКАХ тесты")
     print()
     print("1 — Деление")
     print("2 — Доступ к элементу списка")
@@ -58,13 +55,13 @@ def main():
         choice = input("Выберите пункт меню: ").strip()
 
         if choice == "1":
-            divide_demo()
+            divide()
 
         elif choice == "2":
-            list_index_demo()
+            list_index()
 
         elif choice == "3":
-            file_read_demo()
+            file_read()
 
         elif choice == "0":
             print("Завершение работы программы.")
@@ -74,7 +71,6 @@ def main():
 
 
 if __name__ == "__main__":
-    # на случай принудительной остановки (сtrl+с)
     try:
         main()
     except KeyboardInterrupt:
