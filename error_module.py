@@ -1,6 +1,5 @@
 import sys  # для подключения собственного обработчика исключений
 import os # для работы с файлами и папками
-import json 
 import traceback # для получения стека вызовов
 from datetime import datetime # для фиксации времени ошибки
 
